@@ -8,7 +8,8 @@ A robust fish detection model for real-time underwater fish detection in any mar
 3. Creating Virtual Environment
 4. Setup Yolov7 Repository
 5. Modify Yolov7 files
-6. 
+6. Train Yolov7 Model
+7.  
 
 
 ### Introduction
@@ -63,8 +64,12 @@ Now, open the **training** folder in the **cfg** folder. Inside, you'll find 7 c
 <br/>
 ![Screenshot 2024-04-16 130749](https://github.com/meerap1/FISH-DETECTION/assets/156745402/53cfd46b-5c8b-40e5-ba79-932575a57e0a) <br/>
 <br/>
-Now, we need to download the weights for the YOLOv7 base model from the official YOLOv7 repository. It is hidden in the [releases](https://github.com/WongKinYiu/yolov7/releases). Here, I downloaded **yolov7.pt** and copied it to the yolov7_custom directory.
-
+Now, we need to download the weights for the YOLOv7 base model from the official YOLOv7 repository. It is hidden in the [releases](https://github.com/WongKinYiu/yolov7/releases). Here, I downloaded **yolov7.pt** and copied it to the yolov7_custom directory. <br/>
+<br/>
+### Train Yolov7 Model
+Open Anaconda Prompt, ensure you're in the **yolov7_custom** directory, and run the following command: <br/>
+<br/>
+`python train.py --workers 1 --device 0 --batch-size 8 --epochs 100 --img 640 640 --data data/custom_data.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7_custom.yaml --name yolov7_custom --weights yolov7.pt`
 
 
 
