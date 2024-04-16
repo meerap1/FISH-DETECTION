@@ -51,6 +51,23 @@ this will install all the libraries that are part of the requirements.txt once i
 This will install PyTorch with CUDA support. <br/>
 <br/>
 ### Modify Yolov7 Files
+Now, the **train** and **validation** folders should be moved into the **data** folder inside the **yolov7_custom** directory. <br/>
+<br/>
+Now make a copy of coco.yaml file in the data folder and rename it to **custom_data.yaml** . open it and modify like below <br/>
+<br/>
+In the text file, we will modify the **train** and **val** paths. Also, **nc** represents the number of classes. In this case, we have only one class, which is **Fish**, and it is mentioned in the **names**. <br/>
+<br/>
+![Screenshot 2024-04-16 123401](https://github.com/meerap1/FISH-DETECTION/assets/156745402/0a6a70c9-79bf-41fa-bbb9-e4737eeaca06) <br/>
+<br/>
+Now, open the **training** folder in the **cfg** folder. Inside, you'll find 7 configuration files. You can choose any of them to train the fish dataset. In this case, we are selecting **yolov7.yaml**. Make a copy of this file. In the copied file, change only **nc** to 1 as we are having only one class, and then save it. <br/>
+<br/>
+![Screenshot 2024-04-16 130749](https://github.com/meerap1/FISH-DETECTION/assets/156745402/53cfd46b-5c8b-40e5-ba79-932575a57e0a) <br/>
+<br/>
+Now, we need to download the weights for the YOLOv7 base model from the official YOLOv7 repository. It is hidden in the [releases](https://github.com/WongKinYiu/yolov7/releases). Here, I downloaded **yolov7.pt** and copied it to the yolov7_custom directory.
+
+
+
+
 
 
 
