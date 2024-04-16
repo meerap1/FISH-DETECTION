@@ -10,7 +10,8 @@ A robust fish detection model for real-time underwater fish detection in any mar
 5. Modify Yolov7 files
 6. Train Yolov7 Model
 7. Testing on Images and Videos
-
+8. Results
+9. Inferences
 
 ### Introduction
 I'm excited to share with you my latest project: a YOLOv7 model for fish detection. Leveraging state-of-the-art deep learning techniques, this model is designed to accurately identify and localize fish in images. Utilizing Anaconda Prompt, I've crafted an environment where you can easily set up and run the model on your own machine.
