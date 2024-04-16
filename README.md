@@ -84,7 +84,7 @@ Copy a test image and video and move them to the main directory 'yolov7_custom'.
 <br/>
 The output will be saved in the 'exp' folder within the 'detect' directory under 'runs'.
 ### Results
-In my case, no detections are made in the images, whereas fish are getting detected in the videos."
+In my case, no detections are made in the images, whereas fish are getting detected in the videos.
 ### Inferences
 It appears that not all fish are being detected accurately. Further work is needed to improve the detection performance. In conclusion, while the model shows promise in detecting fish in videos, refinement is required to achieve consistent and reliable detection across various scenarios and types of images.
 
