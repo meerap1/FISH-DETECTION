@@ -9,7 +9,7 @@ A robust fish detection model for real-time underwater fish detection in any mar
 4. Setup Yolov7 Repository
 5. Modify Yolov7 files
 6. Train Yolov7 Model
-7.  
+7. Testing on Images and Videos
 
 
 ### Introduction
@@ -69,11 +69,20 @@ Now, we need to download the weights for the YOLOv7 base model from the official
 ### Train Yolov7 Model
 Open Anaconda Prompt, ensure you're in the **yolov7_custom** directory, and run the following command: <br/>
 <br/>
-`python train.py --workers 1 --device 0 --batch-size 8 --epochs 100 --img 640 640 --data data/custom_data.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7_custom.yaml --name yolov7_custom --weights yolov7.pt`
-
-
-
-
-
+`python train.py --workers 1 --device 0 --batch-size 8 --epochs 100 --img 640 640 --data data/custom_data.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7_custom.yaml --name yolov7_custom --weights yolov7.pt` <br/>
+<br/>
+When the training is finished, you can find the training files in the yolov7_custom folder from runsin the main yolov7_custom directory. Additionally, within that directory, you'll find the 'weights' folder. Inside the 'weights' folder, locate the **best.pt** file, which represents the best weights based on the validation loss. Copy and paste this file to the main directory of 'yolov7_custom' and rename it to 'yolov7_custom.pt'.
+### Testing on Images and Videos
+Copy a test image and video and move them to the main directory 'yolov7_custom'. Rename the image to **1.jpg** and the video to **1.mp4**. Then, run the following command: <br/>
+<br/>
+`python detect.py --weights yolov7_custom.pt --conf 0.5 --img-size 640 --source 1.jpg --view-img --no-trace` <br/>
+<br/>
+`python detect.py --weights yolov7_custom.pt --conf 0.5 --img-size 640 --source 1.mp4 --view-img --no-trace` <br/>
+<br/>
+The output will be saved in the 'exp' folder within the 'detect' directory under 'runs'.
+### Results
+In my case, no detections are made in the images, whereas fish are getting detected in the videos."
+### Inferences
+It appears that not all fish are being detected accurately. Further work is needed to improve the detection performance. In conclusion, while the model shows promise in detecting fish in videos, refinement is required to achieve consistent and reliable detection across various scenarios and types of images.
 
 
