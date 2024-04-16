@@ -17,9 +17,9 @@ A robust fish detection model for real-time underwater fish detection in any mar
 I'm excited to share with you my latest project: a YOLOv7 model for fish detection. Leveraging state-of-the-art deep learning techniques, this model is designed to accurately identify and localize fish in images. Utilizing Anaconda Prompt, I've crafted an environment where you can easily set up and run the model on your own machine.
 
 ### Data Source:
-The data used in this repository for fish object detection in marine videos was sourced from another repository, which provided annotated video clips. A subset of over 1500 + images from this dataset was selected for training purposes. This curated dataset encompasses both positive and negative images, where positive images contain instances of fish, annotated with bounding boxes and class labels, while negative images depict marine scenes without fish objects. <br/>
+The data used in this repository for fish object detection in marine videos was sourced from another repository, which provided annotated video clips. A subset of over 1500 + images and labels from this dataset was selected for training purposes. This curated dataset encompasses both positive and negative images, where positive images contain instances of fish, annotated with bounding boxes and class labels, while negative images depict marine scenes without fish objects. <br/>
 <br/>
-Furthermore, the dataset organization involves dividing the images into train and val folders. Within each of these folders, there are two subfolders: one containing images and the other containing corresponding labels. <br/>
+Furthermore, the dataset organization involves dividing the images and labels into train and val folders. Within each of these folders, there are two subfolders: one containing images and the other containing corresponding labels. <br/>
 <br/>
 ### Creating Virtual Environement:
 To create a virtual environment, open Anaconda Prompt and use the following code: <br/>
